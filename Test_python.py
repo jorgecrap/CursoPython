@@ -2,10 +2,6 @@
 import openpyxl
 import docx
 
-
-
-
-
 # Excels
 
 '''
@@ -27,10 +23,11 @@ for linea in rango:
 # Words
 
 doc = docx.Document('demo.docx')
-parrafos = doc.paragraphs
+doc2 = docx.Document('demo2.docx')
 
-for par in parrafos:
-	print (par.text)
-	trozos = par.runs
-	for tr in trozos:
-		print('\t' + tr.text)
+tb = doc.tables[0]
+tb2 = doc.tables[0]
+
+doc.save('demo.docx')
+doc2.save('demo2.docx')
+
